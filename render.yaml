@@ -3,6 +3,6 @@ services:
     name: kallofem-scraper
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: scrapy crawl kallofem
+    startCommand: uvicorn main:app --reload --host 0.0.0.0 --port 8000
     repo: https://github.com/Abohesha/allas_assignment
     branch: main
