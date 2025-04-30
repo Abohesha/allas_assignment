@@ -1,0 +1,8 @@
+services:
+  - type: worker
+    name: kallofem-scraper
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: scrapy crawl kallofem
+    repo: https://github.com/Abohesha/allas_assignment
+    branch: main
