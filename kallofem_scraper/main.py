@@ -31,7 +31,7 @@ def run_scraper(url: str = Query(...)):
         return JSONResponse(status_code=500, content={"error": str(e)})
 
 
-@app.get("/products")
+@app.get("/")
 def get_scraped_products():
     try:
         with open("products.json", "r", encoding="utf-8") as f:
